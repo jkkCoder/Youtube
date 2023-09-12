@@ -3,3 +3,7 @@ export const HAMBURGER_MENU = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOE
 export const YOUTUBE_LOGO = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1280px-Logo_of_YouTube_%282015-2017%29.svg.png'
 
 export const USER_ICON = 'https://cdn-icons-png.flaticon.com/512/666/666201.png'
+
+const YOUTUBE_API_KEY = 'AIzaSyBgOy-xb0OWkTprR_gqR-OYTtRUp7nPbGA'
+
+export const YOUTUBE_VIDEOS_API = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&key=${YOUTUBE_API_KEY}`
