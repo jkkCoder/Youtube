@@ -3,7 +3,7 @@ import {HAMBURGER_MENU, USER_ICON, YOUTUBE_LOGO} from "../utils/constants"
 
 const Head = () => {
   return (
-    <div className='grid grid-flow-col p-5 m-2 shadow-lg'>
+    <div className='grid grid-flow-col p-5 mb-5 shadow-lg'>
         <div className='flex col-span-1'>
             <img className='h-8' alt="hamburger" src={HAMBURGER_MENU} />
             <img className='h-8 mx-2' alt="youtube logo" src={YOUTUBE_LOGO} />
