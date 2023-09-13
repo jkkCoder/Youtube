@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {HAMBURGER_MENU, USER_ICON, YOUTUBE_LOGO, YOUTUBE_SEARCH_API} from "../utils/constants"
+import {HAMBURGER_MENU, USER_ICON, YOUTUBE_LOGO, YOUTUBE_SEARCH_RECOMMENDATION_API} from "../utils/constants"
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleMenu } from '../utils/appSlice'
 import { cacheResults } from '../utils/searchSlice'
@@ -27,7 +27,7 @@ const Head = () => {
   },[search])
 
   const getSearchSuggestions = async () => {
-    const data = await fetch(YOUTUBE_SEARCH_API + search)
+    const data = await fetch(YOUTUBE_SEARCH_RECOMMENDATION_API + search)
     const json = await data.json()
 
     setSuggestion(json[1])
