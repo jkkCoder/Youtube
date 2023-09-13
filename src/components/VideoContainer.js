@@ -2,18 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { YOUTUBE_VIDEOS_API } from '../utils/constants'
 import VideoCards from './VideoCards'
 import { Link } from 'react-router-dom'
+import useGetVideos from '../hooks/useGetVideos'
 
 const VideoContainer = () => {
-  const [videos, setvideos] = useState([])
-  useEffect(() => {
-    getVideos()
-  },[])
-
-  const getVideos = async () => {
-    const data = await fetch(YOUTUBE_VIDEOS_API)
-    const json = await data.json()
-    setvideos(json.items)
-  }
+  
+  const videos = useGetVideos(YOUTUBE_VIDEOS_API)
 
   return (
     <div className='flex flex-wrap'>
