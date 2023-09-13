@@ -20,7 +20,7 @@ const VideosSearchContainer = () => {
   return (
     <div>
         {
-            videos.map(video => <Link key={video.id.videoId}  to={"/watch?v="+video.id.videoId} ><VideoSearchCards info={video} /></Link>)
+            videos.map(video => video.id.kind === 'youtube#video' && <Link key={video.id.videoId}  to={"/watch?v="+video.id.videoId} ><VideoSearchCards info={video} /></Link>)
         }
     </div>
   )
